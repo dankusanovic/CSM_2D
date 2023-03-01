@@ -1,4 +1,4 @@
-![SWE Logo](./Logo.jpg)
+![CSM_2D Logo](./Logo.jpg)
 
 This is a Finite Element Program for the MIC-412 class at the Universidad Tecnica Federico Santa Maria.
 
