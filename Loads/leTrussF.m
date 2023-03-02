@@ -9,27 +9,14 @@ function Fe = leTrussF(ELEM, NODE, fe)
     ve = NODE(2).coords - NODE(1).coords;
     Le = norm(ve);
     
-    %Rotation matrix from global to local
-    Re = RotationAxesTruss(ve);
-    
     %The global axes transformation
-    Te = LocalAxesTruss(ve);
+    Re = LocalAxesTruss(ve);
     
     %Force in truss local coordinates
-    qe = rho*Ae*Le/2*Re*fe';
+    qe = rho*Ae*Le/2*Re*[fe,fe]';
     
     %Force in global coordinate
-    Fe = Te'*[qe; qe];
-end
-
-%Compute/update vector rotation.
-function R = RotationAxesTruss(v)
-    %Local axis definition.
-    u = v/norm(v);
-
-    %Transformation matrix
-    R =  [ u(1), u(2);
-          -u(2), u(1)];
+    Fe = Re'*qe;
 end
 
 %Compute/update the local axis of the element.
