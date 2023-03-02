@@ -9,6 +9,7 @@ Computational Solid Mechanics in 2D (CSM_2D)
     
 * Linear operator for assembly and constraints
 * Implementation of Truss, Frame and Quad elements
+* Global to local coordinate transformations
 * Implementation of Static, Modal, and Dynamics analyses
 * Numerical integration for iso-parametric elements
     
