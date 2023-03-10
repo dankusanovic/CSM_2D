@@ -13,7 +13,7 @@ function MESH = DynamicAnalysis(MESH, nt, dt)
     %TODO: Compute the Newmark effective stiffness matrix
     %Keff = ?
 
-    %
+    %TODO: Implement the Newmark-beta algorithm
     wb = waitbar(0,'Dynamic Analysis in Progress...');
     for k = 1:nt
         %Computes the external force vector at k-th time step
